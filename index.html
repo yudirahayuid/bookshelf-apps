@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Bookshelf Apps</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="py-3 bg-dark text-white">
+    <div class="container text-center">
+        <h1 class="fw-bold">Bookshelf Apps</h1>
+    </div>
+</header>
+<main class="py-4">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="fw-bold text-center mb-0">Tambahkan Buku Baru</h2>
+            </div>
+            <div class="card-body">
+                <form id="inputBook">
+                    <div class="form-group row">
+                        <label for="inputBookTitle" class="col-sm-2 col-form-label"
+                        >Judul</label
+                        >
+                        <div class="col-sm-10">
+                            <input
+                                    id="inputBookTitle"
+                                    type="text"
+                                    class="form-control"
+                                    required
+                                    placeholder="Judul"
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputBookAuthor" class="col-sm-2 col-form-label"
+                        >Penulis</label
+                        >
+                        <div class="col-sm-10">
+                            <input
+                                    id="inputBookAuthor"
+                                    type="text"
+                                    class="form-control"
+                                    required
+                                    placeholder="Penulis"
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputBookYear" class="col-sm-2 col-form-label"
+                        >Tahun</label
+                        >
+                        <div class="col-sm-10">
+                            <input
+                                    id="inputBookYear"
+                                    type="number"
+                                    class="form-control"
+                                    required
+                                    placeholder="Tahun"
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input
+                                        id="inputBookIsComplete"
+                                        type="checkbox"
+                                        class="form-check-input"
+                                />
+                                <label for="inputBookIsComplete" class="form-check-label"
+                                >Sudah Dibaca</label
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10 offset-sm-2">
+                            <button
+                                    id="bookSubmit"
+                                    type="submit"
+                                    class="btn btn-primary w-100"
+                            >
+                                Masukkan Buku ke rak <strong>Belum selesai dibaca</strong>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="fw-bold text-center mb-0">Cari Judul Buku</h2>
+            </div>
+            <div class="card-body">
+                <form id="searchBook">
+                    <div class="row">
+                        <div class="col-md-10 mb-3">
+                            <input
+                                    id="searchBookTitle"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Judul"
+                            />
+                        </div>
+                        <div class="col-md-2">
+                            <button
+                                    id="searchSubmit"
+                                    type="submit"
+                                    class="btn btn-primary w-100"
+                            >
+                                Cari
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="fw-bold text-center mb-0">Buku Belum Selesai Dibaca</h2>
+            </div>
+            <div class="card-body">
+                <div id="incompleteBookshelfList" class="row g-4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="fw-bold text-center mb-0">Buku Selesai Dibaca</h2>
+            </div>
+            <div class="card-body">
+                <div id="completeBookshelfList" class="row g-4"></div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
